@@ -21,6 +21,7 @@ This plugin just focuses on menu accessibility. Divi has dozens of modules and t
 * Adds text to menu hamburger button used to toggle menus and search
 * Link text is underlined
 * Changes Divi's `.screen-reader-text` class to not `display:none` so screen readers can actually see it.
+* Social icon links have text screen readers can see
 
 ## What this plugin will not do
 
@@ -35,3 +36,11 @@ This plugin just focuses on menu accessibility. Divi has dozens of modules and t
 * Escape key closes slide out and full screen menus
 * See if skip-to-nav can focus to specific nav child elements, depending on which menu used, instead of parent nav element
 * Test all the modules for accessibility. There are to many for this first release.
+* Zooming and scaling must not be disabled (changes on mobile)
+    `<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">`
+
+## Release Notes
+
+### Version: 0.1
+
+Initial Release

@@ -24,7 +24,8 @@
   text-decoration: none;
 }
 
-.screen-reader-text {
+.screen-reader-text,
+.et-social-icon span {
   display: block !important; /* Divi's CSS sets this to display:none which hides from screen readers :-/ */
   position:absolute;
   left:-10000px;

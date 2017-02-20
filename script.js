@@ -9,7 +9,7 @@
               top-nav - if #et_top_search
               slide out - hide .et_search_outer, target .et_slide_in_menu_container .et-search-form
 
-    to do: escape key closes slide out and full screen menus
+    to do: Make common selectors variables
 
 */
 
@@ -33,7 +33,7 @@
     $span.replaceWith(function () {
         return $('<a/>', {
             class: 'mobile_menu_bar et_pb_header_toggle et_toggle_slide_menu',
-            html: this.innerHTML,
+            html: '<i class="screen-reader-text">Open Menu</i>',
             href: '#'
         });
     });
@@ -42,37 +42,64 @@
     $span.replaceWith(function () {
         return $('<a/>', {
             class: 'mobile_menu_bar et_pb_header_toggle et_toggle_fullscreen_menu',
-            html: this.innerHTML,
+            html: '<i class="screen-reader-text">Open Menu</i>',
             href: '#'
         });
     });
 
-    // focus in on menu items if menu is not open
-    $('.et_pb_header_toggle').keyup( function(e) {
-      if( $('.et_pb_slide_menu_opened, .et_pb_fullscreen_menu_opened').length ) {
-        if(e.which == 13) { // Enter Key press
-          // if menu searh form
-          if( $('.et_slide_in_menu_container .et-search-form').length ) {
-            $('.et_slide_in_menu_container .et-search-field').focus();
-          } else {
-            $('.et_first_mobile_item a').focus();
+    // add text to close menu button and tabindex for focus
+    $('.et_slide_in_menu_container .mobile_menu_bar').append('<i class="screen-reader-text">Close Menu</i>').attr('tabindex', '0');
+
+
+
+
+    // focus in on menu items if opening menu
+    $('.et_pb_header_toggle').keyup( function() {
+      if( $('body').hasClass('et_pb_slide_menu_active') || $('body').hasClass('et_pb_fullscreen_menu_active') ) {
+        // Give close menu button key access (making it an anchor tag breaks layout)
+        $('.et_slide_in_menu_container .et_toggle_fullscreen_menu').keyup( function(e) {
+          if(e.which == 13) {
+            $(this).trigger('click');
+            $('.et_pb_header_toggle').focus();
           }
+        });
+        // if menu searh form
+        if( $('.et_slide_in_menu_container .et-search-form').length ) {
+          $('.et_slide_in_menu_container .et-search-field').focus();
+        // if a slide menu
+        } else if ( $('body').hasClass('et_pb_slide_menu_active') ) {
+          $('.et_first_mobile_item a').focus();
+          $('.et_slide_in_menu_container').focus();
+        // if the full menu
+        } else {
+          $('.et_slide_in_menu_container .mobile_menu_bar').focus();
         }
       }
     });
 
     // foucus out, close menu and focus on content area
-    $('.et_mobile_menu > li:last-child a').focusout( function() {
-      if( $('.et_pb_slide_menu_opened, .et_pb_fullscreen_menu_opened').length > 0 ) {
-        $('.et_pb_header_toggle').trigger('click');
+    //$('.et_mobile_menu > li:last-child a').focusout( function() {
+    $('.logo_container a').focusin( function() {
+      if( $('body').hasClass('et_pb_slide_menu_active') || $('body').hasClass('et_pb_fullscreen_menu_active') ) {
+        $('.et_pb_header_toggle').click();
         $('#et-main-area').focus();
       }
     });
     $('.skip-to-content').focusin( function() {
-      if( $('.et_pb_slide_menu_opened, .et_pb_fullscreen_menu_opened').length > 0 ) {
-        $('.et_pb_header_toggle').trigger('click').focus();
+      if( $('body').hasClass('et_pb_slide_menu_active') || $('body').hasClass('et_pb_fullscreen_menu_active') ) {
+        $('.et_pb_header_toggle').click().focus();
       }
     });
+
+    // Escape key closes slideout or fullscreen menu
+    $(document).keyup( function(e) {
+      if( $('body').hasClass('et_pb_slide_menu_active') || $('body').hasClass('et_pb_fullscreen_menu_active') ) {
+        if(e.which == 27) {
+          $('.et_pb_header_toggle').click().focus();
+        }
+      }
+    });
+
 
   /* Else is top menu */
   } else {
@@ -115,6 +142,9 @@
 
 /* Global fixes */
 
+  // Change viewport meta tag to allow for user scale
+  $('meta[name=viewport]').attr('content', 'width=device-width, initial-scale=1.0');
+
   // Skip Link targets need tabindex for focus
   $('#et-top-navigation, #et-main-area').attr('tabindex', '-1');
 
@@ -124,15 +154,12 @@
     $(skip_id).focus();
   });
 
-  // add text to menu button and tabindex for focus
-  $('.mobile_menu_bar').append('<i class="screen-reader-text">Menu Button</i>').attr('tabindex', '0');
-
 /* End global fixes */
 
 
-  // Enter key causes a click
+  // Enter key causes a click on this element
   function keypress_enter() {
-    $(this).keypress( function(e) {
+    $(this).keyup( function(e) {
       if(e.which == 13) {
         $(this).trigger('click');
       }
