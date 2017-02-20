@@ -1,0 +1,77 @@
+/* Delta Divi 508
+------------------------------------------------------- */
+
+/* Focus needs to be visible */
+:focus {
+  outline: rgb(94, 158, 215) auto 5px;
+}
+/* Links should be underlined ... */
+#main-content a {
+  text-decoration: underline;
+}
+#main-content a:hover,
+#main-content a:focus {
+  text-decoration: none;
+}
+/* ... Not on buttons and headers */
+#main-content a.et_pb_button,
+#main-content h1 a,
+#main-content h2 a,
+#main-content h3 a,
+#main-content h4 a,
+#main-content h5 a,
+#main-content h6 a {
+  text-decoration: none;
+}
+
+.screen-reader-text {
+  display: block !important; /* Divi's CSS sets this to display:none which hides from screen readers :-/ */
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+/* Hide menu button and serach text added by js
+.mobile_menu_bar i,
+#et_top_search i,
+.et_close_search_field i {
+  display: block;
+  text-indent: -10000rem;
+}*/
+
+/* Skip links (added to DOM with header.php scripts.js make them function) */
+.skip-to-content {
+  font-weight: bold;
+  position: absolute;
+  top: -5000px;
+  left: 0;
+  width: 100%;
+  z-index: 100000;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: .95em .5em .75em;
+  font-size: 20px;
+  text-align: center;
+  background: rgba(0,0,0, .9);
+  border-bottom: 1px solid #000;
+  color: #ededed;
+}
+.skip-to-content:focus,
+.skip-to-content:active {
+  top:0;
+}
+@media print {
+  .skip-to-content { display: none; }
+}
+
+/* Menu accessibility (Classes added by scripts.js) */
+.focused_menu > ul.sub-menu {
+  visibility: visible;
+  opacity: 1;
+}
+li.menu-item > ul.-sub-menu > ul.-sub-menu {
+  transition: opacity 0.2s linear 0s; /* Transition not working */
+}
