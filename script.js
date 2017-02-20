@@ -6,10 +6,10 @@
 /*  Test 1 - full screen or slide out menu?
               test element is visible = .et_slide_in_menu_container
     Test 2 - is Search enabled?
-              top-nav - if ( $( "#et_top_search" ).length ) {
+              top-nav - if #et_top_search
               slide out - hide .et_search_outer, target .et_slide_in_menu_container .et-search-form
 
-    to do: escape key closes menus, close fullscreen button
+    to do: escape key closes slide out and full screen menus
 
 */
 

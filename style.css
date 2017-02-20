@@ -33,13 +33,6 @@
   height:1px;
   overflow:hidden;
 }
-/* Hide menu button and serach text added by js
-.mobile_menu_bar i,
-#et_top_search i,
-.et_close_search_field i {
-  display: block;
-  text-indent: -10000rem;
-}*/
 
 /* Skip links (added to DOM with header.php scripts.js make them function) */
 .skip-to-content {
