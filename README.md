@@ -45,7 +45,7 @@ This plugin just focuses on menu accessibility. Divi has dozens of modules and t
 
 ## Release Notes
 
-### Version: 0.1.1
+### Version: 0.1.2
 
 * Skip links are now placed after open `<body>` with JS, no longer needs a tabindex set
 * Plugin files cannot be accessed directly
