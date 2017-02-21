@@ -35,8 +35,8 @@
   overflow:hidden;
 }
 
-/* Skip links (added to DOM with header.php scripts.js make them function) */
-.skip-to-content {
+/* Skip links (added to DOM with scripts.js) */
+.d508_skip_to {
   font-weight: bold;
   position: absolute;
   top: -5000px;
@@ -53,19 +53,20 @@
   border-bottom: 1px solid #000;
   color: #ededed;
 }
-.skip-to-content:focus,
-.skip-to-content:active {
+.d508_skip_to:focus,
+.d508_skip_to:active {
   top:0;
 }
 @media print {
-  .skip-to-content { display: none; }
+  .d508_skip_to { display: none; }
 }
 
 /* Menu accessibility (Classes added by scripts.js) */
-.focused_menu > ul.sub-menu {
+.d508_focused_menu > ul.sub-menu {
   visibility: visible;
   opacity: 1;
 }
-li.menu-item > ul.-sub-menu > ul.-sub-menu {
-  transition: opacity 0.2s linear 0s; /* Transition not working */
+li.menu-item > ul.sub-menu,
+li.menu-item > ul.sub-menu > ul.sub-menu {
+  transition: opacity 0.2s linear 0s; 
 }

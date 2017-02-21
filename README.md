@@ -1,12 +1,12 @@
 # Delta Divi 508
 
-A WordPress plugin to help the Divi theme be more Section 508 compliant.
+A WordPress plugin to help the Divi theme be more accessible and Section 508 compliant.
 
 This plugin just focuses on menu accessibility. Divi has dozens of modules and theme options. Not every module or option combination has been tested or fixed.
 
 ## Requirements
 
-* A Divi 3.0 theme or child theme
+* A [Divi 3.0](https://www.elegantthemes.com/gallery/divi/) theme or child theme
 
 ## Installation
 
@@ -36,6 +36,7 @@ This plugin just focuses on menu accessibility. Divi has dozens of modules and t
 
 ## Things to do
 
+* Check Divi's contact forms
 * Add Aria tags
 * Make the mobile version of default top menu style also accessible
 * Test on iOS Voiceover
@@ -43,6 +44,12 @@ This plugin just focuses on menu accessibility. Divi has dozens of modules and t
 * Test all the modules for accessibility. There are to many for this first release.
 
 ## Release Notes
+
+### Version: 0.1.1
+
+* Skip links are now placed after open `<body>` with JS, no longer needs a tabindex set
+* Plugin files cannot be accessed directly
+* Scoped CSS selectors 
 
 ### Version: 0.1.1
 

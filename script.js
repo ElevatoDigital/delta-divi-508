@@ -129,10 +129,10 @@
 
     // Make menu dropdowns keyboard accessible
     $('.menu-item-has-children').focusin( function() {
-      $(this).addClass("focused_menu");
+      $(this).addClass("d508_focused_menu");
     });
     $('.menu-item-has-children').focusout( function() {
-      $(this).removeClass("focused_menu");
+      $(this).removeClass("d508_focused_menu");
     });
 
   }
@@ -145,11 +145,14 @@
   // Change viewport meta tag to allow for user scale
   $('meta[name=viewport]').attr('content', 'width=device-width, initial-scale=1.0');
 
+  // Add skip links after open `<body>` tag
+  $('body').prepend('<a href="#et-main-area" class="d508_skip_to">Skip to Content</a> <a href="#et-top-navigation" class="d508_skip_to">Skip to Navigation</a>');
+
   // Skip Link targets need tabindex for focus
   $('#et-top-navigation, #et-main-area').attr('tabindex', '-1');
 
   // Makes skip-to links focus on their targets
-  $('.skip-to-content').click( function() {
+  $('.d508_skip_to').click( function() {
     skip_id = $(this).attr('href');
     $(skip_id).focus();
   });

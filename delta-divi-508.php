@@ -3,12 +3,14 @@
 * Plugin Name: Delta Divi 508
 * Plugin URI: https://github.com/DeltaSystems/delta-divi-508
 * Description: Accessibility tweaks to the Divi theme.
-* Version: 0.1.1
+* Version: 0.1.2
 * Author: Delta Systems
 * Author URI: https://deltasystems.com/
 * License: GNU General Public License
 */
 
+/* Exit if accessed directly */
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 /* Enqueue assets */
 function d508_register_assets() {
@@ -19,11 +21,3 @@ function d508_register_assets() {
 	wp_enqueue_script( 'd508_js' );
 }
 add_action( 'wp_enqueue_scripts', 'd508_register_assets', 9999 );
-
-/* Add to wp_footer */
-function d508_footer() {
-  // Skip links
-  echo'<a href="#et-main-area" class="skip-to-content" tabindex="1">Skip to Content</a>';
-  echo'<a href="#et-top-navigation" class="skip-to-content" tabindex="2">Skip to Navigation</a>';
-}
-add_action('wp_footer', 'd508_footer');
