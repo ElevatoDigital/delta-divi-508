@@ -6,19 +6,19 @@
 * Version: 0.1.1
 * Author: Delta Systems
 * Author URI: https://deltasystems.com/
-* License:
+* License: GNU General Public License
 */
 
 
 /* Enqueue assets */
-function register_assets() {
+function d508_register_assets() {
 	wp_register_style( 'd508_css', plugins_url( 'delta-divi-508/style.css' ), '', null, 'screen' );
 	wp_enqueue_style( 'd508_css' );
 
-  wp_register_script( 'd508_js', plugins_url( 'delta-divi-508/script.js' ), array( 'jquery' ), null, true );
+	wp_register_script( 'd508_js', plugins_url( 'delta-divi-508/script.js' ), array( 'jquery' ), null, true );
 	wp_enqueue_script( 'd508_js' );
 }
-add_action( 'wp_enqueue_scripts', 'register_assets', 9999 );
+add_action( 'wp_enqueue_scripts', 'd508_register_assets', 9999 );
 
 /* Add to wp_footer */
 function d508_footer() {
