@@ -4,11 +4,15 @@ A WordPress plugin to help the Divi theme be more Section 508 compliant.
 
 This plugin just focuses on menu accessibility. Divi has dozens of modules and theme options. Not every module or option combination has been tested or fixed.
 
+## Requirements
+
+* A Divi 3.0 theme or child theme
+
 ## Installation
 
-* Make a folder in WordPress's `plugins` folder called `delta-divi-508`.
-* Copy plugin files to that folder.
-* Activate plugin in WordPress admin.
+* Make a folder in WordPress's `plugins` folder called `delta-divi-508`
+* Copy plugin files to that folder
+* Activate plugin in WordPress admin
 
 ## What this plugin does
 
@@ -23,7 +27,7 @@ This plugin just focuses on menu accessibility. Divi has dozens of modules and t
 * Link text is underlined
 * Changes Divi's `.screen-reader-text` class to not `display:none` so screen readers can actually see it.
 * Social icon links have text screen readers can see
-* Viewport allows user scaling 
+* Viewport allows user scaling
 
 ## What this plugin will not do
 
@@ -44,7 +48,7 @@ This plugin just focuses on menu accessibility. Divi has dozens of modules and t
 
 * Changed viewport to allow user scaling
 * Social icon links have text screen readers can see
-* Escape key closes slideout and fullscreen menus 
+* Escape key closes slideout and fullscreen menus
 * Fullscreen menu focus bug fixed
 
 ### Version: 0.1

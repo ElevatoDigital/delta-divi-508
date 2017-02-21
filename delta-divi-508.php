@@ -1,7 +1,7 @@
 <?php
 /**
 * Plugin Name: Delta Divi 508
-* Plugin URI: https://deltasystems.com/
+* Plugin URI: https://github.com/DeltaSystems/delta-divi-508
 * Description: Accessibility tweaks to the Divi theme.
 * Version: 0.1.1
 * Author: Delta Systems
