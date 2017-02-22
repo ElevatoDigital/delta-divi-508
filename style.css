@@ -68,5 +68,15 @@
 }
 li.menu-item > ul.sub-menu,
 li.menu-item > ul.sub-menu > ul.sub-menu {
-  transition: opacity 0.2s linear 0s; 
+  transition: opacity 0.2s linear 0s;
+}
+
+/* Divi Slider focus */
+.et_pb_slider .et-pb-arrow-prev:focus {
+  left: 22px;
+  opacity: 1;
+}
+.et_pb_slider .et-pb-arrow-next:focus {
+  right: 22px;
+  opacity: 1;
 }
