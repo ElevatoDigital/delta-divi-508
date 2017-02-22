@@ -14,10 +14,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 /* Enqueue assets */
 function d508_register_assets() {
-	wp_register_style( 'd508_css', plugins_url( 'delta-divi-508/style.css' ), '', null, 'screen' );
+	wp_register_style( 'd508_css', plugins_url( 'delta-divi-508/style-min.css' ), '', null, 'screen' );
 	wp_enqueue_style( 'd508_css' );
 
-	wp_register_script( 'd508_js', plugins_url( 'delta-divi-508/script.js' ), array( 'jquery' ), null, true );
+	wp_register_script( 'd508_js', plugins_url( 'delta-divi-508/script-min.js' ), array( 'jquery' ), null, true );
 	wp_enqueue_script( 'd508_js' );
 }
 add_action( 'wp_enqueue_scripts', 'd508_register_assets', 9999 );

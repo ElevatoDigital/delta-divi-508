@@ -8,10 +8,11 @@
 /* Links should be underlined ... */
 #main-content a {
   text-decoration: underline;
-}
-#main-content a:hover,
-#main-content a:focus {
-  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 }
 /* ... Not on buttons and headers */
 #main-content a.et_pb_button,
@@ -52,10 +53,11 @@
   background: rgba(0,0,0, .9);
   border-bottom: 1px solid #000;
   color: #ededed;
-}
-.d508_skip_to:focus,
-.d508_skip_to:active {
-  top:0;
+
+  &:focus,
+  &:active {
+    top:0;
+  }
 }
 @media print {
   .d508_skip_to { display: none; }
