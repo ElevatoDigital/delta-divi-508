@@ -49,6 +49,7 @@ This plugin just focuses on menu accessibility. Divi has dozens of modules and t
 
 * Uses SCSS and Autoprefixer (Codekit)
 * Compressed CSS and JS
+* Only activates if Divi is the installed theme or parent theme
 
 ### Version: 0.1.2
 

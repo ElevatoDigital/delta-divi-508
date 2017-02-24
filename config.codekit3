@@ -7,7 +7,7 @@
 		"uuidString": "57A31E30-93A6-47FC-AC87-8C48532C5FDB"
 		}
 	],
-"creatorBuild": "25504",
+"creatorBuild": "25568",
 "files": {
 	"\/delta-divi-508.php": {
 		"ft": 8192,
@@ -39,35 +39,35 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/script-min.js": {
+	"\/scripts\/script-min.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/script-min-min.js",
+		"oAP": "\/scripts\/script-min-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
 		},
-	"\/script.js": {
+	"\/scripts\/script.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/script-min.js",
+		"oAP": "\/scripts\/script-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
 		},
-	"\/style-min.css": {
+	"\/styles\/style-min.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/style-min-min.css",
+		"oAP": "\/styles\/style-min-min.css",
 		"oF": 0,
 		"oS": 0
 		},
-	"\/style.scss": {
+	"\/styles\/style.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -75,7 +75,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/style-min.css",
+		"oAP": "\/styles\/style-min.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -87,7 +87,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 509484439,
-	"displayValue": "DeltaSystems:WPPlugins:DeltaDivi508",
+	"displayValue": "delta-divi-508",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_teal"
 	},
@@ -961,6 +961,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-multi-assign": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-multi-spaces": {
 			"active": 0,
 			"optionString": "{'exceptions': {'Property': true, 'BinaryExpression': false, 'VariableDeclarator': false, 'ImportDeclaration': false}}"
@@ -1289,6 +1293,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"prefer-promise-reject-errors": {
+			"active": 0,
+			"optionString": "{'allowEmptyReject': false}"
+			},
 		"prefer-rest-params": {
 			"active": 0,
 			"optionString": ""
@@ -1382,6 +1390,10 @@
 			"optionString": ""
 			},
 		"template-curly-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"template-tag-spacing": {
 			"active": 0,
 			"optionString": "'never'"
 			},
