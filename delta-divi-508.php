@@ -3,7 +3,7 @@
 * Plugin Name: Delta Divi 508
 * Plugin URI: https://github.com/DeltaSystems/delta-divi-508
 * Description: Accessibility tweaks to the Divi theme.
-* Version: 0.1.3
+* Version: 0.1.4
 * Author: Delta Systems
 * Author URI: http://justcalldelta.com/
 * License: GNU General Public License

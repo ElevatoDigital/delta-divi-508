@@ -14,16 +14,28 @@
     text-decoration: none;
   }
 }
-/* ... Not on buttons and headers */
-#main-content a.et_pb_button,
-#main-content h1 a,
-#main-content h2 a,
-#main-content h3 a,
-#main-content h4 a,
-#main-content h5 a,
-#main-content h6 a {
-  text-decoration: none;
+#footer-widgets .footer-widget li a {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
+/* ... Not on buttons and headers and social icons */
+#main-content {
+  a.et_pb_button,
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a,
+  .et_pb_social_icon a.icon,
+  .et_pb_social_icon a.follow_button {
+    text-decoration: none;
+  }
+}
+
 
 .screen-reader-text,
 .et-social-icon span {

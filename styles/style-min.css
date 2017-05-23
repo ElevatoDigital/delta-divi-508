@@ -1,1 +1,81 @@
-:focus{outline:#5e9ed7 auto 5px}#main-content a{text-decoration:underline}#main-content a:hover,#main-content a:focus{text-decoration:none}#main-content a.et_pb_button,#main-content h1 a,#main-content h2 a,#main-content h3 a,#main-content h4 a,#main-content h5 a,#main-content h6 a{text-decoration:none}.screen-reader-text,.et-social-icon span{display:block !important;position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}.d508_skip_to{font-weight:bold;position:absolute;top:-5000px;left:0;width:100%;z-index:100000;display:block;text-decoration:none;text-transform:uppercase;padding:.95em .5em .75em;font-size:20px;text-align:center;background:rgba(0,0,0,0.9);border-bottom:1px solid #000;color:#ededed}.d508_skip_to:focus,.d508_skip_to:active{top:0}@media print{.d508_skip_to{display:none}}.d508_focused_menu>ul.sub-menu{visibility:visible;opacity:1}li.menu-item>ul.sub-menu,li.menu-item>ul.sub-menu>ul.sub-menu{-webkit-transition:opacity 0.2s linear 0s;transition:opacity 0.2s linear 0s}.et_pb_slider .et-pb-arrow-prev:focus{left:22px;opacity:1}.et_pb_slider .et-pb-arrow-next:focus{right:22px;opacity:1}
+/* Delta Divi 508
+------------------------------------------------------- */
+/* Focus needs to be visible */
+:focus {
+  outline: #5e9ed7 auto 5px; }
+
+/* Links should be underlined ... */
+#main-content a {
+  text-decoration: underline; }
+  #main-content a:hover, #main-content a:focus {
+    text-decoration: none; }
+
+#footer-widgets .footer-widget li a {
+  text-decoration: underline; }
+  #footer-widgets .footer-widget li a:hover {
+    text-decoration: none; }
+
+/* ... Not on buttons and headers and social icons */
+#main-content a.et_pb_button,
+#main-content h1 a,
+#main-content h2 a,
+#main-content h3 a,
+#main-content h4 a,
+#main-content h5 a,
+#main-content h6 a,
+#main-content .et_pb_social_icon a.icon,
+#main-content .et_pb_social_icon a.follow_button {
+  text-decoration: none; }
+
+.screen-reader-text,
+.et-social-icon span {
+  display: block !important;
+  /* Divi's CSS sets this to display:none which hides from screen readers :-/ */
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
+
+/* Skip links (added to DOM with scripts.js) */
+.d508_skip_to {
+  font-weight: bold;
+  position: absolute;
+  top: -5000px;
+  left: 0;
+  width: 100%;
+  z-index: 100000;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: .95em .5em .75em;
+  font-size: 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid #000;
+  color: #ededed; }
+  .d508_skip_to:focus, .d508_skip_to:active {
+    top: 0; }
+
+@media print {
+  .d508_skip_to {
+    display: none; } }
+
+/* Menu accessibility (Classes added by scripts.js) */
+.d508_focused_menu > ul.sub-menu {
+  visibility: visible;
+  opacity: 1; }
+
+li.menu-item > ul.sub-menu,
+li.menu-item > ul.sub-menu > ul.sub-menu {
+  transition: opacity 0.2s linear 0s; }
+
+/* Divi Slider focus */
+.et_pb_slider .et-pb-arrow-prev:focus {
+  left: 22px;
+  opacity: 1; }
+
+.et_pb_slider .et-pb-arrow-next:focus {
+  right: 22px;
+  opacity: 1; }

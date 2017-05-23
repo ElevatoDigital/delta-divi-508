@@ -45,6 +45,11 @@ This plugin just focuses on menu accessibility. Divi has dozens of modules and t
 
 ## Release Notes
 
+### Version: 0.1.4
+
+* Social icons and links are not underlined
+* Footer widget links are underlined
+
 ### Version: 0.1.3
 
 * Uses SCSS and Autoprefixer (Codekit)
