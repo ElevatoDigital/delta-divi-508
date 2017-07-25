@@ -79,3 +79,9 @@ li.menu-item > ul.sub-menu > ul.sub-menu {
 .et_pb_slider .et-pb-arrow-next:focus {
   right: 22px;
   opacity: 1; }
+
+/* Accordian and Toggle modules' outline */
+.et_pb_toggle_title:focus {
+  outline: none; }
+  .et_pb_toggle_title:focus::before {
+    outline: #5e9ed7 auto 5px; }

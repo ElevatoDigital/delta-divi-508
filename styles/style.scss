@@ -94,3 +94,12 @@ li.menu-item > ul.sub-menu > ul.sub-menu {
   right: 22px;
   opacity: 1;
 }
+
+/* Accordian and Toggle modules' outline */
+.et_pb_toggle_title:focus {
+  outline: none;
+
+  &::before {
+    outline: rgb(94, 158, 215) auto 5px;
+  }
+}

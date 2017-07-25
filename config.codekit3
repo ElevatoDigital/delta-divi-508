@@ -7,7 +7,7 @@
 		"uuidString": "57A31E30-93A6-47FC-AC87-8C48532C5FDB"
 		}
 	],
-"creatorBuild": "25813",
+"creatorBuild": "25849",
 "files": {
 	"\/delta-divi-508.php": {
 		"ft": 8192,
@@ -87,7 +87,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 509484439,
-	"displayValue": "DeltaSystems:WPPlugins:DeltaDivi508",
+	"displayValue": "delta-divi-508",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_teal"
 	},
@@ -2025,6 +2025,7 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",

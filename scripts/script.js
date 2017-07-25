@@ -105,7 +105,7 @@
   } else {
 
     /* if menu search is turned on */
-    if( $( "#et_top_search" ).length ) {
+    if( $('#et_top_search').length ) {
 
       // Add a label to the search field
       $('.et_search_outer .et-search-field').attr('id', 'divi-s').before('<label class="screen-reader-text" for="divi-s">Search for:</label>');
@@ -158,6 +158,36 @@
   });
 
 /* End global fixes */
+
+/* Make Accordian and Toggle modules more accessible */
+
+  // Add tabindex to toggels so keayboard can focus on it.
+  if( $('.et_pb_toggle_title').length ) {
+    $('.et_pb_toggle_title').attr('tabindex', '0');
+    // Trigger a click on focus of closed element when enter is pressed
+    $('.et_pb_toggle_title').focus( function() {
+      $(this).keyup( function(e) {
+        if(e.which == 13) {
+          $(this).trigger('click');
+          $(this).next('.et_pb_toggle_content').attr('tabindex', -1).focus();
+        }
+      });
+    });
+  }
+  // Tabs
+  if( $('.et_pb_tabs').length ) {
+    // Trigger click on focused tab when enter is pressed
+    $('.et_pb_tabs_controls a').focus( function() {
+      $(this).keyup( function(e) {
+        if(e.which == 13) {
+          var target_class = $(this).parent().attr('class').split(" ")[0];
+          setTimeout(function(){ // Wait for animation to finish
+            $('.et_pb_all_tabs .' + target_class ).attr('tabindex', -1).focus();
+          }, 800);
+        }
+      });
+    });
+  }
 
 
   // Enter key causes a click on this element

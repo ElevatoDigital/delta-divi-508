@@ -47,6 +47,10 @@ This plugin just focuses on menu accessibility. Divi has dozens of modules and t
 
 ### Version: 0.1.4
 
+* Toggle, Tabs and Accordion modules are keyboard accessible.
+
+### Version: 0.1.4
+
 * Social icons and links are not underlined
 * Footer widget links are underlined
 
