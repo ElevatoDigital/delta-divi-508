@@ -45,7 +45,7 @@ This plugin just focuses on menu accessibility. Divi has dozens of modules and t
 
 ## Release Notes
 
-### Version: 0.1.4
+### Version: 0.1.5
 
 * Toggle, Tabs and Accordion modules are keyboard accessible.
 
