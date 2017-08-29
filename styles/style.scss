@@ -3,7 +3,13 @@
 
 /* Focus needs to be visible */
 :focus {
-  outline: rgb(94, 158, 215) auto 5px;
+  outline: rgb(94, 158, 215) auto medium;
+}
+// No outline on these anchor links - looks strange
+#et-top-navigation:focus,
+#et-main-area:focus {
+  outline: 0;
+  box-shadow: 0px 0px 1px 1px rgb(94, 158, 215);
 }
 /* Links should be underlined ... */
 #main-content a {
@@ -102,4 +108,14 @@ li.menu-item > ul.sub-menu > ul.sub-menu {
   &::before {
     outline: rgb(94, 158, 215) auto 5px;
   }
+}
+
+/* Make slider navigation visible on focus */
+.et_pb_slider .et-pb-arrow-prev:focus {
+    left: 22px;
+    opacity: 1;
+}
+.et_pb_slider .et-pb-arrow-next:focus {
+    right: 22px;
+    opacity: 1;
 }

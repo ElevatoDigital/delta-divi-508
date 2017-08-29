@@ -2,7 +2,12 @@
 ------------------------------------------------------- */
 /* Focus needs to be visible */
 :focus {
-  outline: #5e9ed7 auto 5px; }
+  outline: #5e9ed7 auto medium; }
+
+#et-top-navigation:focus,
+#et-main-area:focus {
+  outline: 0;
+  box-shadow: 0px 0px 1px 1px #5e9ed7; }
 
 /* Links should be underlined ... */
 #main-content a {
@@ -85,3 +90,12 @@ li.menu-item > ul.sub-menu > ul.sub-menu {
   outline: none; }
   .et_pb_toggle_title:focus::before {
     outline: #5e9ed7 auto 5px; }
+
+/* Make slider navigation visible on focus */
+.et_pb_slider .et-pb-arrow-prev:focus {
+  left: 22px;
+  opacity: 1; }
+
+.et_pb_slider .et-pb-arrow-next:focus {
+  right: 22px;
+  opacity: 1; }

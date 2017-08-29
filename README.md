@@ -45,6 +45,11 @@ This plugin just focuses on menu accessibility. Divi has dozens of modules and t
 
 ## Release Notes
 
+### Version: 0.1.6
+
+* Focus adjustments on skip link anchors - navigation and main content
+* Make slider navigation visible on focus
+
 ### Version: 0.1.5
 
 * Toggle, Tabs and Accordion modules are keyboard accessible.
